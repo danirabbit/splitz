@@ -18,4 +18,4 @@ Run `meson build` to configure the build environment and then change to the buil
 To install, use `ninja install`, then execute with `com.github.danrabbit.harvey`
 
     sudo ninja install
-    com.github.danrabbit.harvey
+    com.github.danrabbit.splitz
