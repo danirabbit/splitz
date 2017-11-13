@@ -15,7 +15,7 @@ Run `meson build` to configure the build environment and then change to the buil
     cd build
     ninja test
 
-To install, use `ninja install`, then execute with `com.github.danrabbit.harvey`
+To install, use `ninja install`, then execute with `com.github.danrabbit.splitz`
 
     sudo ninja install
     com.github.danrabbit.splitz
