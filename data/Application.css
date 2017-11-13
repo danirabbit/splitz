@@ -1,0 +1,70 @@
+/*
+* Copyright (c) 2017 Daniel Foré (http://danielfore.com)
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public
+* License as published by the Free Software Foundation; either
+* version 2 of the License, or (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+* General Public License for more details.
+*
+* You should have received a copy of the GNU General Public
+* License along with this program; if not, write to the
+* Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+* Boston, MA 02110-1301 USA
+*/
+
+.titlebar,
+decoration,
+window {
+    transition: background 300ms ease-in-out;
+}
+
+.titlebar:backdrop,
+decoration:backdrop,
+list,
+window:backdrop {
+    background: transparent;
+}
+
+decoration:backdrop {
+    box-shadow:
+        0 14px 28px transparent;
+}
+
+grid label {
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+separator:backdrop {
+    background: #fff;
+    box-shadow:
+        0 0 1px #000,
+        0 1px 2px alpha (#000, 0.3);
+}
+
+window:backdrop {
+    color: #fff;
+    text-shadow:
+        0 0 1px #000,
+        0 1px 2px alpha (#000, 0.3);
+}
+
+.h1 {
+    font-size: 3em;
+    font-weight: 700;
+}
+
+.titlebar:backdrop {
+    box-shadow: none;
+    border: none;
+}
+
+.titlebar *:backdrop {
+    color: transparent;
+    text-shadow: none;
+}
