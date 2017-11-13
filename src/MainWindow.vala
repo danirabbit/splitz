@@ -21,10 +21,8 @@ public class MainWindow : Gtk.Window {
     public MainWindow (Gtk.Application application) {
         Object (
             application: application,
-            height_request: 700,
             icon_name: "com.github.danrabbit.splitz",
-            title: _("Splitz"),
-            width_request: 500
+            title: _("Splitz")
         );
     }
 
@@ -66,7 +64,15 @@ public class MainWindow : Gtk.Window {
         grid.attach (possible_time_key, 0, 4, 1, 1);
         grid.attach (possible_time_label, 1,4, 1, 1);
 
+        var headerbar = new Gtk.HeaderBar ();
+        headerbar.show_close_button = true;
+
+        var headerbar_context = headerbar.get_style_context ();
+        headerbar_context.add_class (Gtk.STYLE_CLASS_FLAT);
+        headerbar_context.add_class ("default-decoration");
+
         add (grid);
         get_style_context ().add_class ("rounded");
+        set_titlebar (headerbar);
     }
 }
